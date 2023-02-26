@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:domain_firebase/services/item_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -30,16 +32,20 @@ class NewItemScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            ElevatedButton(onPressed: _addItem, child: const Text("Save"))
+            ElevatedButton(
+                onPressed: () {
+                  _addItem(context);
+                },
+                child: const Text("Save"))
           ],
         ),
       ),
     );
   }
 
-  _addItem() {
+  _addItem(BuildContext context) {
     _itemService.addItem2Firebase(
         _itemName.text, {"name": _itemName.text, "desc": _itemDesc.text});
-        Navigator.pop(context);
+    Navigator.pop(context);
   }
 }
