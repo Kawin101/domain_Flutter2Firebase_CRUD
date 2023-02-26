@@ -1,5 +1,8 @@
 # domain_firebase
 
+* > 935309 Mobile Application 2022-2023
+* > Kawinphop Chomnikorn 633410142-5
+
 A new Flutter project.
 
 ## Getting Started
