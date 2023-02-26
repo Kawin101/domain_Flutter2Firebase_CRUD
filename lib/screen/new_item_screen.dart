@@ -40,5 +40,6 @@ class NewItemScreen extends StatelessWidget {
   _addItem() {
     _itemService.addItem2Firebase(
         _itemName.text, {"name": _itemName.text, "desc": _itemDesc.text});
+        Navigator.pop(context);
   }
 }
